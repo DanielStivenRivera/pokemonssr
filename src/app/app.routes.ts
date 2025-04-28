@@ -6,6 +6,14 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/about-page/about-page.component'),
   },
   {
+    path: 'pokemons',
+    loadComponent: () => import('./pages/pokemons/pokemons-page.component'),
+  },
+  {
+    path: 'pokemons/:id',
+    loadComponent: () => import('./pages/pokemon-page/pokemon-page.component'),
+  },
+  {
     path: 'pricing',
     loadComponent: () => import('./pages/pricing-page/pricing-page.component'),
   },
@@ -15,6 +23,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'about',
+    redirectTo: 'pokemons',
   },
 ];
